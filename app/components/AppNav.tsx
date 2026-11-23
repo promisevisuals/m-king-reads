@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Compass, Crown, Home, LibraryBig, Search, UserRound } from 'lucide-react';
 import { useAccount } from '../../lib/account';
 import Logo from './Logo';
+import ShareAppButton from './ShareAppButton';
 
 const TABS = [
   { href: '/', label: 'Home', icon: Home },
@@ -34,6 +35,7 @@ export default function AppNav() {
           <Link href="/free-books" className={isActive(path, '/free-books') ? 'on' : ''}>70,000+ Free</Link>
         </nav>
         <div className="appActions">
+          <ShareAppButton />
           <Link href="/explore" className="iconBtn" aria-label="Search"><Search size={19} /></Link>
           {user ? (
             <Link href="/profile" className={`avatar${plus ? ' avatarPlus' : ''}`} aria-label="Your account">

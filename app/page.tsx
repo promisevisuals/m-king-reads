@@ -8,6 +8,7 @@ import Rail from './components/Rail';
 import BookCover from './components/BookCover';
 import ContinueReading from './components/ContinueReading';
 import SponsorSlot from './components/SponsorSlot';
+import ShareAppButton from './components/ShareAppButton';
 import SaveBookButton from './components/SaveBookButton';
 import Footer from './components/Footer';
 
@@ -149,6 +150,8 @@ export default async function Home() {
           <p className="dim">Publish your novel chapter by chapter. Readers unlock it, and you keep most of every sale.</p></div>
         <Link className="btn btnGold" href="/write"><PenLine size={16} /> Publish your novel</Link>
       </section>
+
+      <ShareAppButton variant="card" />
 
       <section className="africa">
         <div className="africaCopy">
