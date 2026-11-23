@@ -13,7 +13,7 @@ export default function ShareBookButton({ title }: { title: string }) {
     const url = window.location.href;
     try {
       if (navigator.share) {
-        await navigator.share({ title: title + ' — M King Reads', text: 'Read this book on M King Reads.', url });
+        await navigator.share({ title: title + ' — M King Reads', text: `📖 I'm reading “${title}” on M King Reads and I think you'll love it! It's free to read on your phone — come read with me ✨`, url });
         return;
       }
       await navigator.clipboard.writeText(url);

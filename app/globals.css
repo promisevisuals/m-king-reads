@@ -1057,3 +1057,13 @@ html[data-pv-seen] .pvSplash, .pvSplash.pvGone { display: none; }
 .authNotice{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:14px;background:rgba(232,180,90,.12);border:1px solid rgba(232,180,90,.35);color:inherit;line-height:1.5;font-size:.92rem}
 .authNotice b{font-size:.98rem}
 .authNotice small{opacity:.75;font-size:.8rem}
+
+/* ---------- Share the app ---------- */
+.shareAppCard { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; border-color: rgba(226, 182, 92, .45); background: radial-gradient(circle at 90% 10%, rgba(226, 182, 92, .2), transparent 55%), var(--surface); }
+.shareAppCard h2 { font-family: var(--display); font-size: 24px; margin: 6px 0 4px; }
+.shareAppCard p { margin: 0; max-width: 520px; }
+.shareAppCard .small { margin-top: 6px; }
+.shareAppPreview { white-space: pre-line; padding: 12px 14px; border-radius: 12px; background: var(--bg-2); border: 1px solid var(--line); color: var(--text); font-size: 14px; line-height: 1.55; }
+.shareAppLinks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.shareAppLinks .btn { padding: 0 8px; font-size: 13.5px; }
+@media (max-width: 640px) { .shareAppCard .btn { width: 100%; } }

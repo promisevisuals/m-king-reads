@@ -7,6 +7,7 @@ import { supabase } from '../../lib/supabase-browser';
 import { signOutAndRelease } from '../../lib/deviceLock';
 import { useAccount } from '../../lib/account';
 import { naira } from '../../lib/format';
+import ShareAppButton from '../components/ShareAppButton';
 import Footer from '../components/Footer';
 
 type Day = { day: string; seconds: number };
@@ -106,6 +107,7 @@ export default function ProfilePage() {
         <Link href="/bookmarks"><Bookmark size={18} /> Bookmarks</Link>
         <Link href="/suggest-book"><MessageSquarePlus size={18} /> Suggest a book</Link>
         <Link href="/my-suggestions"><Settings size={18} /> My suggestions</Link>
+        <ShareAppButton variant="menu" />
         <Link href="/support"><HeartHandshake size={18} /> Support M King Reads</Link>
         <Link href="/advertise"><Megaphone size={18} /> Advertise with us</Link>
         <Link href="/notes" className="adminLink"><NotebookPen size={18} /> My notes</Link>
