@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, CheckCircle2 } from 'lucide-react';
 import { supabase } from '../../lib/supabase-browser';
@@ -12,6 +12,13 @@ export default function SuggestBookPage() {
   const [reason,setReason]=useState('');
   const [message,setMessage]=useState('');
   const [busy,setBusy]=useState(false);
+
+  // Prefilled from search: /suggest-book?title=Digital%20Fortress or ?author=Dan%20Brown
+  useEffect(()=>{
+    const p=new URLSearchParams(window.location.search);
+    if(p.get('title')) setTitle(p.get('title')!.slice(0,200));
+    if(p.get('author')) setAuthor(p.get('author')!.slice(0,200));
+  },[]);
 
   async function submit(e: FormEvent) {
     e.preventDefault(); setBusy(true); setMessage('');
